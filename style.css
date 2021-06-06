@@ -111,15 +111,18 @@ h1 {
     height: 5px;
     color: var(--color-fg-dark);
     background-color: var(--color-fg-dark);
-    width: 50%;
-    margin: 0.8rem auto;
+    width: 140%;
+    max-width: 200px;
+    margin-top: 0.8rem;
     border-radius: 2px;
 }
 
 /* NAV STYLES */
 
 .main-heading {
-    padding: 1rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -185,6 +188,7 @@ h1 {
 .container {
     max-width: 90%;
     margin: 0 auto;
+    margin-top: 2rem;
 }
 
 .landing {
@@ -231,6 +235,7 @@ h1 {
 }
 
 .project .preview {
+    max-width: 450px;
     order: -1;
 }
 
@@ -370,7 +375,11 @@ footer > hr {
     /* RESPONSIVE NAV */
     .main-heading {
         align-items: center;
-        padding-top: 0.5rem;
+        padding-top: 1rem;
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 90%;
+        margin: 0 auto;
     }
     .mobile-nav-toggle {
         display: none;
@@ -392,14 +401,81 @@ footer > hr {
     .main-nav > a:last-of-type {
         margin-right: 1.5rem;
     }
-}
 
-@media (min-width: 1000px) {
-    .main-heading {
-        max-width: 90%;
+    .container {
+        margin-top: 3rem;
+    }
+    
+    .main-text {
+        align-items: center;
+        text-align: center;
+    }
+
+    .main-img {
+        margin: 0 auto;
+        margin-top: 1rem;
+    }
+
+    .timestamp {
+        display: grid;
+        grid-template-columns: 2.8rem auto;
+    }
+
+    .projects {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact form {
+        max-width: 450px;
         margin: 0 auto;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
+    .landing {
+        flex-direction: row;
+    }
+    
+    .main-text {
+        align-items: initial;
+        text-align: initial;
+        padding-top: 2rem;
+    }
+
+    .main-img {
+        margin-top: 0;
+        margin-right: 0;
+    }
+
+    .project {
+        flex-direction: row;
+        align-items: center;
+        gap: 3em;
+    }
+
+    .project .preview {
+        order: 1;
+    }
+
+}
+
+@media (min-width: 1300px) {
+    .container, .main-heading {
+        max-width: 1200px;
+    }
+    
+    .projects {
+        gap: 4rem;
+    }
+
+    .project {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .contact {
+        margin-top: 9rem;
+    }
 }
