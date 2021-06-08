@@ -35,6 +35,7 @@ html {
     background-color: var(--color-bg);
     font-family: var(--ff-primary);
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -59,6 +60,10 @@ h1 {
     font-size: 3rem;
 }
 
+video {
+    width: 100%;
+}
+
 /* UTILITY CLASSES */
 
 .hidden {
@@ -73,14 +78,22 @@ h1 {
     display: flex;
     filter: drop-shadow(0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25));
     border-radius: 0.3rem;
-    padding: 1.2em 2em;
+    padding: 1em 1.8em;
     font-weight: bold;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .button span {
     padding-top: 0.18rem;
     padding-left: 0.3rem;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button:focus {
+    outline: white solid 2px;
 }
 
 .button.primary {
@@ -104,6 +117,10 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.sub-header h2 {
+    font-size: 2.5rem;
 }
 
 .sect-title-divider {
@@ -162,6 +179,8 @@ h1 {
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
+    font-size: 1.15rem;
+    font-weight: 600;
 }
 
 .main-nav li {
@@ -192,7 +211,6 @@ h1 {
 }
 
 .landing {
-    margin-top: 1rem;
     display: flex;
     flex-direction: column;
 }
@@ -200,6 +218,14 @@ h1 {
 .main-text {
     display: flex;
     flex-direction: column;
+}
+
+.main-text h1 {
+    font-size: 3rem;
+}
+
+.main-text h2 {
+    font-size: 2rem;
 }
 
 .main-text p {
@@ -211,17 +237,18 @@ h1 {
 
 .main-img {
     margin-top: 2rem;
+    max-width: 600px;
 }
 
 .main-img svg {
     width: 100%;
-    max-width: 500px;
 }
 
 /* PROJECT LISTING STYLES */
 
 .projects {
     margin-top: 4rem;
+    margin-bottom: 8rem;
 }
 
 .project {
@@ -241,6 +268,7 @@ h1 {
 
 .project .title {
     padding-top: 1.5rem;
+    font-size: 1.5rem;
 }
 
 .project .tags {
@@ -264,14 +292,14 @@ h1 {
     max-width: 26.25rem;
 }
 
-.project .timestamps {
-    display: flex;
-    flex-direction: column;
-}
-
 .project .time {
     color: var(--color-highlight);
-    margin-top: 0.6rem;
+    margin-top: 5px;
+    font-family: "Roboto Mono", monospace;
+}
+
+.project .time:hover {
+    cursor: pointer;
 }
 
 .project .explanation {
@@ -286,6 +314,11 @@ h1 {
     font-size: 1rem;
 }
 
+.project .button svg {
+    margin-top: 1px;
+    margin-right: 1px;
+}
+
 .project .github {
     fill: var(--color-bg);
 }
@@ -294,14 +327,11 @@ h1 {
 
 .contact {
     margin-top: 4rem;
+    margin-bottom: 5rem;
 }
 
-input[type="submit"] {
-    border: none;
-    background-image: none;
-    background-color: transparent;
-    box-shadow: none;
-    color: inherit;
+.contact hr {
+    margin-bottom: 2rem;
 }
 
 .contact form {
@@ -318,9 +348,17 @@ input[type="submit"] {
     padding: 2rem 0 0.2rem 0;
 }
 
-.contact form input[type="submit"] {
+.contact input[type="submit"] {
+    border: none;
+    background-image: none;
+    box-shadow: none;
+    color: inherit;
+    font-family: inherit;
+}
+
+.contact form .button {
     margin-top: 1.6rem;
-    width: 9rem;
+    max-width: max-content;
 }
 
 .contact form input[type="text"],
@@ -328,7 +366,7 @@ textarea {
     resize: none;
     background-color: var(--color-bg-alt-2);
     border: none;
-    height: 2.7rem;
+    height: 3rem;
     border-radius: 0.25rem;
     box-shadow: 0rem 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
     padding: 1rem;
@@ -341,7 +379,7 @@ input:focus {
 }
 
 #message {
-    height: 8rem;
+    height: 12rem;
 }
 
 /* FOOTER STYLES */
@@ -394,7 +432,7 @@ footer > hr {
         align-items: center;
     }
     .main-nav > a {
-        padding: 0 0.5rem 0 0.5rem;
+        padding: 0 0.8rem 0 0.8rem;
         text-align: initial;
     }
 
@@ -405,15 +443,24 @@ footer > hr {
     .container {
         margin-top: 3rem;
     }
-    
+
     .main-text {
         align-items: center;
         text-align: center;
     }
 
+    .main-text h1 {
+        font-size: 4rem;
+    }
+
+    .main-text h2 {
+        font-size: 3rem;
+    }
+
     .main-img {
-        margin: 0 auto;
+        min-width: 500px;
         margin-top: 1rem;
+        margin: auto;
     }
 
     .timestamp {
@@ -428,7 +475,7 @@ footer > hr {
         align-items: center;
     }
     .contact form {
-        max-width: 450px;
+        max-width: 580px;
         margin: 0 auto;
     }
 }
@@ -436,17 +483,23 @@ footer > hr {
 @media (min-width: 1000px) {
     .landing {
         flex-direction: row;
+        margin-bottom: 0;
+        height: calc(80vh - 75px);
+        max-height: 1280px;
+        margin-top: 15vh;
     }
-    
+
     .main-text {
         align-items: initial;
         text-align: initial;
+        margin-top: 2rem;
         padding-top: 2rem;
     }
 
     .main-img {
-        margin-top: 0;
         margin-right: 0;
+        margin-top: 0;
+        width: 600px;
     }
 
     .project {
@@ -458,16 +511,16 @@ footer > hr {
     .project .preview {
         order: 1;
     }
-
 }
 
 @media (min-width: 1300px) {
-    .container, .main-heading {
+    .container,
+    .main-heading {
         max-width: 1200px;
     }
-    
+
     .projects {
-        gap: 4rem;
+        gap: 2rem;
     }
 
     .project {
@@ -476,6 +529,6 @@ footer > hr {
     }
 
     .contact {
-        margin-top: 9rem;
+        margin-top: 13rem;
     }
 }
