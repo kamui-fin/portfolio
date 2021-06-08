@@ -319,7 +319,7 @@ video {
     margin-right: 1px;
 }
 
-.project .github {
+.project .github svg path {
     fill: var(--color-bg);
 }
 
