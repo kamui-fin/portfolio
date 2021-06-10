@@ -1,8 +1,110 @@
+/* FONTS */
+
+/* Roboto Mono */
+@font-face {
+    font-family: "Roboto Mono";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./fonts/roboto-mono/roboto-mono.eot");
+    src: local(""),
+        url("./fonts/roboto-mono/roboto-mono.eot?#iefix")
+            format("embedded-opentype"),
+        url("./fonts/roboto-mono/roboto-mono.woff2") format("woff2"),
+        url("./fonts/roboto-mono/roboto-mono.woff") format("woff"),
+        url("./fonts/roboto-mono/roboto-mono.ttf") format("truetype"),
+        url("./fonts/roboto-mono/roboto-mono.svg#RobotoMono") format("svg");
+}
+
+/* Overpass 300 */
+@font-face {
+    font-family: "Overpass";
+    font-style: normal;
+    font-weight: 300;
+    src: url("./fonts/overpass/overpass/overpass-v5-latin-300.eot");
+    src: local(""),
+        url("./fonts/overpass/overpass/overpass-v5-latin-300.eot?#iefix")
+            format("embedded-opentype"),
+        url("./fonts/overpass/overpass/overpass-v5-latin-300.woff2")
+            format("woff2"),
+        url("./fonts/overpass/overpass/overpass-v5-latin-300.woff")
+            format("woff"),
+        url("./fonts/overpass/overpass/overpass-v5-latin-300.ttf")
+            format("truetype"),
+        url("./fonts/overpass/overpass/overpass-v5-latin-300.svg#Overpass")
+            format("svg");
+}
+
+/* Overpass Regular */
+@font-face {
+    font-family: "Overpass";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./fonts/overpass/overpass-v5-latin-regular.eot");
+    src: local(""),
+        url("./fonts/overpass/overpass-v5-latin-regular.eot?#iefix")
+            format("embedded-opentype"),
+        url("./fonts/overpass/overpass-v5-latin-regular.woff2") format("woff2"),
+        url("./fonts/overpass/overpass-v5-latin-regular.woff") format("woff"),
+        url("./fonts/overpass/overpass-v5-latin-regular.ttf") format("truetype"),
+        url("./fonts/overpass/overpass-v5-latin-regular.svg#Overpass")
+            format("svg");
+}
+
+/* Overpass 600 */
+@font-face {
+    font-family: "Overpass";
+    font-style: normal;
+    font-weight: 600;
+    src: url("./fonts/overpass/overpass-v5-latin-600.eot");
+    src: local(""),
+        url("./fonts/overpass/overpass-v5-latin-600.eot?#iefix")
+            format("embedded-opentype"),
+        url("./fonts/overpass/overpass-v5-latin-600.woff2") format("woff2"),
+        url("./fonts/overpass/overpass-v5-latin-600.woff") format("woff"),
+        url("./fonts/overpass/overpass-v5-latin-600.ttf") format("truetype"),
+        url("./fonts/overpass/overpass-v5-latin-600.svg#Overpass") format("svg");
+}
+
+/* Overpass 700 */
+@font-face {
+    font-family: "Overpass";
+    font-style: normal;
+    font-weight: 700;
+    src: url("./fonts/overpass/overpass-v5-latin-700.eot");
+    src: local(""),
+        url("./fonts/overpass/overpass-v5-latin-700.eot?#iefix")
+            format("embedded-opentype"),
+        url("./fonts/overpass/overpass-v5-latin-700.woff2") format("woff2"),
+        url("./fonts/overpass/overpass-v5-latin-700.woff") format("woff"),
+        url("./fonts/overpass/overpass-v5-latin-700.ttf") format("truetype"),
+        url("./fonts/overpass/overpass-v5-latin-700.svg#Overpass") format("svg");
+}
+
+/* Staatliches Regular */
+@font-face {
+    font-family: "Staatliches";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./fonts/staatliches/staatliches-v6-latin-regular.eot");
+    src: local(""),
+        url("./fonts/staatliches/staatliches-v6-latin-regular.eot?#iefix")
+            format("embedded-opentype"),
+        url("./fonts/staatliches/staatliches-v6-latin-regular.woff2")
+            format("woff2"),
+        url("./fonts/staatliches/staatliches-v6-latin-regular.woff")
+            format("woff"),
+        url("./fonts/staatliches/staatliches-v6-latin-regular.ttf")
+            format("truetype"),
+        url("./fonts/staatliches/staatliches-v6-latin-regular.svg#Staatliches")
+            format("svg");
+}
+
 /* VARIABLES */
 
 :root {
     --ff-logo: "Staatliches", sans-serif;
     --ff-primary: "Overpass", sans-serif;
+    --ff-mono: "Roboto Mono", monospace;
 
     --color-bg: #2f3e46;
     --color-bg-light: #4e626c;
