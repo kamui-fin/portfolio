@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Kamui - Portfolio</title>
+        <script type="text/javascript" src="js/svg-loader.min.js"></script>
         <link rel="stylesheet" href="style.css" />
         <meta
             name="description"
@@ -47,11 +48,6 @@
         />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#ffffff" />
-        <script
-            type="text/javascript"
-            src="js/svg-loader.min.js"
-            async
-        ></script>
     </head>
     <body>
         <header class="main-heading">
@@ -59,7 +55,10 @@
                 <a href="/" class="logo">Kamui</a>
             </div>
             <div class="mobile-nav-toggle">
-                <button class="hamburger">
+                <button
+                    class="hamburger"
+                    aria-label="Hamburger icon to expand navigation menu"
+                >
                     <svg data-src="images/hamburger.svg"></svg>
                 </button>
             </div>
@@ -68,12 +67,20 @@
                     <a href="#projects"><li>Projects</li></a>
                     <a href="#contact"><li>Contact</li></a>
                     <div class="social">
-                        <a href="https://github.com/kamui-7" target="_blank">
+                        <a
+                            href="https://github.com/kamui-7"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
                             <li>
                                 <svg data-src="images/github.svg"></svg>
                             </li>
                         </a>
-                        <a href="https://linkedin.com/" target="_blank">
+                        <a
+                            href="https://linkedin.com/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
                             <li>
                                 <svg data-src="images/linkedin.svg"></svg>
                             </li>
@@ -293,11 +300,11 @@
                         <hr class="sect-title-divider" />
                     </header>
                     <form name="contact" method="POST" data-netlify="true">
-                        <label for="name">Name</label><br />
-                        <input type="text" id="name" name="name" /><br />
-                        <label for="email">Email</label><br />
-                        <input type="text" id="email" email="email" /><br />
-                        <label for="message">Message</label><br />
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" />
+                        <label for="email">Email</label>
+                        <input type="text" id="email" email="email" />
+                        <label for="message">Message</label>
                         <textarea
                             name="message"
                             id="message"

@@ -5,6 +5,7 @@
     font-family: "Roboto Mono";
     font-style: normal;
     font-weight: 400;
+    font-display: swap;
     src: url("./fonts/roboto-mono/roboto-mono.eot");
     src: local(""),
         url("./fonts/roboto-mono/roboto-mono.eot?#iefix")
@@ -20,6 +21,7 @@
     font-family: "Overpass";
     font-style: normal;
     font-weight: 300;
+    font-display: swap;
     src: url("./fonts/overpass/overpass/overpass-v5-latin-300.eot");
     src: local(""),
         url("./fonts/overpass/overpass/overpass-v5-latin-300.eot?#iefix")
@@ -39,6 +41,7 @@
     font-family: "Overpass";
     font-style: normal;
     font-weight: 400;
+    font-display: swap;
     src: url("./fonts/overpass/overpass-v5-latin-regular.eot");
     src: local(""),
         url("./fonts/overpass/overpass-v5-latin-regular.eot?#iefix")
@@ -55,6 +58,7 @@
     font-family: "Overpass";
     font-style: normal;
     font-weight: 600;
+    font-display: swap;
     src: url("./fonts/overpass/overpass-v5-latin-600.eot");
     src: local(""),
         url("./fonts/overpass/overpass-v5-latin-600.eot?#iefix")
@@ -70,6 +74,7 @@
     font-family: "Overpass";
     font-style: normal;
     font-weight: 700;
+    font-display: swap;
     src: url("./fonts/overpass/overpass-v5-latin-700.eot");
     src: local(""),
         url("./fonts/overpass/overpass-v5-latin-700.eot?#iefix")
@@ -85,6 +90,7 @@
     font-family: "Staatliches";
     font-style: normal;
     font-weight: 400;
+    font-display: swap;
     src: url("./fonts/staatliches/staatliches-v6-latin-regular.eot");
     src: local(""),
         url("./fonts/staatliches/staatliches-v6-latin-regular.eot?#iefix")
@@ -397,7 +403,7 @@ video {
 .project .time {
     color: var(--color-highlight);
     margin-top: 5px;
-    font-family: "Roboto Mono", monospace;
+    font-family: var(--ff-mono);
 }
 
 .project .time:hover {
