@@ -1,11 +1,9 @@
-Fix FOUC
+Zoom in
 Cool hover effects
 Some transitions (maybe?)
 Better mobile nav
 Accessibility
 Blob
-Check for responsiveness on larger resolutions (4k+)
-Refractor CSS & HTML
 Animate main svg
 Clamp for headings
-Typewriting effect could be cool
+Typewriting effect
